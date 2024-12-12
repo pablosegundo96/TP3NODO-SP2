@@ -1,26 +1,33 @@
-import express from 'express';
-import{connectDB} from './config/dbConfig.mjs';
-import superHeroRoutes from './routes/superHeroRoutes.mjs';
-import { log } from 'console';
+//inicializar el servidor , conectar con la BD y cargas las rutas para gestionar todas las solicitudes relacionadas con los superheroes
+import express from 'express'; 
+import { connectDB } from './config/dbConfig.mjs'; 
+import superHeroRoutes from './routes/superHeroRoutes.mjs'; 
 
-const app = express();
-const PORT = process.env.PORT || 3000;
+const app = express(); 
+const PORT = process.env.PORT || 3000; 
 
-// Middleeware para parsear JSON
-app.use(express.json());
+// Middleware para parsear JSON 
+app.use(express.json()); 
 
-//Conexion a  Mongo DB
-connectDB();
+// Conexión a MongoDB 
+connectDB(); 
 
-// Configuracion de rutas
-app.use('/api', superHeroRoutes);
+// Configuración de rutas 
+app.use('/api', superHeroRoutes); 
 
-//Manejo de errores para Rutas no encontradas
-app.use((req, res)=>{
-    res.status(404).send({mensaje:"Ruta no encontrada"});
-});
+// Manejo de errores para rutas no encontradas 
+app.use((req, res) => { 
+    res.status(404).send({ mensaje: "Ruta no encontrada" }); 
+}); 
 
-//iniciar el servidor
-app.listen(PORT,()=>{
-    console.log(`Servidor escuchando en el puerto ${PORT}`);
-});
+// Iniciar el servidor 
+app.listen(PORT, () => { 
+    console.log(`Servidor escuchando en el puerto http://localhost:${PORT}`); 
+}); 
+
+/* ejemplo
+http://localhost:3000/api/heroes
+http://localhost:3000/api/heroes/672531113498a48a7ce9ea22
+http://localhost:3000/api/heroes/mayores-30
+http://localhost:3000/api/heroes/buscar/nombreSuperheroe/Superman
+*/

@@ -1,3 +1,6 @@
+//define el modelo de datos para superhero 
+/* establece estructura y reglas de validacion para los elementos*/
+
 import mongoose from "mongoose";
 
 const superheroSchema = new mongoose.Schema({

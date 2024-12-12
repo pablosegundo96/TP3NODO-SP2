@@ -1,3 +1,4 @@
+/* implementa los metodos definidos en la interfaz*/
 import SuperHero from "../models/SuperHero.mjs";
  // Importa el modelo SuperHero, que representa la estructura de los datos de un superhéroe
 import IRepository from "./IRepository.mjs";

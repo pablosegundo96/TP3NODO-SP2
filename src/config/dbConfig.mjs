@@ -1,3 +1,6 @@
+/*configuracion y conexion centralizada con MongoDB
+permite tener una unica instancia de conexion para ser utilizadda en cualquier parte del proyecto 
+*/
 import { connect } from 'mongoose';
 
 export async function connectDB() {

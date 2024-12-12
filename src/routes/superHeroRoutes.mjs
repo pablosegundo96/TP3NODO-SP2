@@ -1,3 +1,4 @@
+//gestionar las solicitudes HTTP , llamando a los servidores correspondientes y utilizando las vistas para presentar los datos 
 import{Router} from'express'; // Importa Router desde Express para crear rutas 
 import{
     obtenerSuperheroePorIdController,

@@ -1,3 +1,7 @@
+//gestionar las solicitudes HTTP , llamando a los servidores correspondientes y utilizando las vistas para presentar los datos 
+//usa uperheroesService.mjs para acceder a los datos de superhéroes.
+//usa  responseView.mjs para presentar los datos formateados en la respuesta.
+
 import { obtenerSuperheroePorId,  obtenerTodosLosSuperheroes ,buscarSuperheroesPorAtributo, obtenerSuperheroesMayoresDe30} from "../services/SuperheroesService.mjs";
 
 import { renderizarListaSuperheroes, renderizarSuperheroe } from "../views/responseView.mjs";

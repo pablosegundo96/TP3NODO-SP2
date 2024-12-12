@@ -1,3 +1,6 @@
+//implementa la logica de negocio, utiliza metodos del repositorio para recaudar,buscar y filtrar datos
+
+
 import superHeroRepository from "../repositories/SuperHeroRepository.mjs";
 
 // Obtener superhéroe por id
